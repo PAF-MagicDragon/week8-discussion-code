@@ -3,34 +3,25 @@
   Date: updated April 26, 2023
   Description: Sample todo app with Firebase 
 */
+import '../api/firebase_todo_api.dart';
 
 import 'package:flutter/material.dart';
 import '../models/todo_model.dart';
 
 class TodoListProvider with ChangeNotifier {
-  List<Todo> _todoList = [
-    Todo(
-      completed: true,
-      userId: 1,
-      title: "Grocery",
-    ),
-    Todo(
-      completed: true,
-      userId: 1,
-      title: "Bills",
-    ),
-    Todo(
-      completed: false,
-      userId: 1,
-      title: "Walk dog",
-    ),
-  ];
+  List<Todo> _todoList = [];
+
+  late FirebaseTodoAPI firebaseService;
+  TodoListProvider() {
+    firebaseService = FirebaseTodoAPI();
+  }
 
   // getter
   List<Todo> get todo => _todoList;
 
-  void addTodo(Todo item) {
-    _todoList.add(item);
+  void addTodo(Todo item) async {
+    String message = await firebaseService.addTodo(item.toJson(item));
+    print(message);
     notifyListeners();
   }
 

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1096807941",
+    "project_id": "cmsc23-todo-app-pdfuentes",
+    "storage_bucket": "cmsc23-todo-app-pdfuentes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1096807941:android:07573a2c0b51f9a00b8e6c",
+        "android_client_info": {
+          "package_name": "com.example.week7_networking_discussion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1096807941-p4grjjg0p2hmg7ps5t5j00jkfkj0cvgj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4C4FquVoFblRSeWRcTEAEQvwttL8oMsE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1096807941-p4grjjg0p2hmg7ps5t5j00jkfkj0cvgj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
